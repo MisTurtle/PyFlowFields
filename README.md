@@ -123,7 +123,7 @@ sim = FlowSimulation.from_data({
 	"name": "My Custom Simulation",  # Simulation name
 	"population": 1000,  # Simulate 1000 particles
 	"bg": [40, 40, 40],  # Set the background to a grayish color
-    "particleseed": 1,  # Constant particle seed to get a reproducible simulation
+	"particleseed": 1,  # Constant particle seed to get a reproducible simulation
 	"fseed": 1,  # Constant noise seed to get a reproducible simulation
 	"fstep": [0.15, 0.15],  # Change the noise origin by 0.15 every second to break boring patterns
 	"pcolor": [255, 255, 255],  # Set the particles color to white
