@@ -13,7 +13,11 @@
 
 ## Installation
 
-TODO
+The easiest way to quickly get started with the PyFlowFields library is to run the following command in a terminal on your machine :
+
+```commandline
+pip install git+https://github.com/MisTurtle/PyFlowFields.git
+```
 
 ## Getting Started
 
