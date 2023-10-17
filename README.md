@@ -38,14 +38,15 @@ Everything works fine? Awesome, let's see what we can do now...
 
 When running a simulation, various keys are setup to perform different actions. Those actions are specified in the table below, and can be found at any time by pressing [D] in a simulation
 
-|  Key  | Action                |
-|:-----:|-----------------------|
-| ENTER | Randomize the seed    |
-|   D   | Show debug info       |
-|   C   | Copy seeds            |
-|   J   | Save settings as JSON |
-|   P   | Pause the simulation  |
-|   Q   | Quit the simulation   |
+|    Key    | Action                |
+|:---------:|-----------------------|
+|   ENTER   | Randomize the seed    |
+|     D     | Show debug info       |
+|     C     | Copy seeds            |
+|     J     | Save settings as JSON |
+| BACKSPACE | Clear canvas          |
+|     P     | Pause the simulation  |
+|     Q     | Quit the simulation   |
 
 ### 2. Exhaustive settings list
 

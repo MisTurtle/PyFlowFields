@@ -5,7 +5,7 @@ settings = {
 	"clear": False,
 	"population": 1000,
 	"pmode": 1,
-	"pcolor": [255, 255, 0, 1],
+	"pcolor": [255, 255, 10, 1],
 	"pforce": 20,
 	"pvar": 0.8,
 	"fstep": [0.075, 0.075],

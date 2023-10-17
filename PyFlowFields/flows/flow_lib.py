@@ -224,7 +224,7 @@ class FlowSimulation:
 		else:
 			self.surface = pygame.display.set_mode(self.settings.screen_size)
 		pygame.display.set_caption(self.settings.name)
-		self.surface.fill(self.settings.clear_color)
+		self.clear_canvas()
 
 		# Init PyGame fonts
 		pygame.font.init()
@@ -234,6 +234,9 @@ class FlowSimulation:
 		p_rdm = random.Random(self.settings.particle_seed)
 		width, height = self.surface.get_size()
 		self.particles = [Particle(p_rdm.randint(1, width), p_rdm.randint(1, height)) for _ in range(self.settings.pop_size)]
+
+	def clear_canvas(self):
+		self.surface.fill(self.settings.clear_color)
 
 	def start_sim(self):
 		self.start_time = time.time()
@@ -258,7 +261,7 @@ class FlowSimulation:
 			temp_layer = pygame.Surface(self.surface.get_size(), pygame.SRCALPHA)
 			if self.settings.clear_each_frame:
 				temp_layer = self.surface
-				self.surface.fill(self.settings.clear_color)
+				self.clear_canvas()
 
 			self.flow_field.update(dt)
 
@@ -295,6 +298,8 @@ class FlowSimulation:
 			self.copy_seed_time = time.time()
 		elif event.key == pygame.K_j:
 			save_file("Save flow simulation settings...", json.dumps(self.serialize(), indent=4), "json")
+		elif event.key == pygame.K_BACKSPACE:
+			self.clear_canvas()
 
 	def _debug_all(self, fps: float):
 		self.fps_history.append(fps)
