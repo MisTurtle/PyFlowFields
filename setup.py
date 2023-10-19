@@ -8,7 +8,7 @@ with open("LICENSE") as f:
 
 setup(
 	name='PyFlowFields',
-	version='0.0.1',
+	version='0.0.2',
 	description='Simulate the reaction of particles in an ever evolving flow field',
 	long_description=readme,
 	author='MisterTurtle',

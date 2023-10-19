@@ -133,6 +133,11 @@ class ParticleDrawingSettings:
 
 	MODE_PARTICLE = 0
 	MODE_LINEAR = 1
+	MODE_BLOC = 2
+	MODE_HOLLOW = 3
+	MODE_HOLLOW_BLOC = 4
+
+	MODE_DEV = 99
 
 	ARG_MODE = "pmode"
 	ARG_WIDTH = "pwidth"

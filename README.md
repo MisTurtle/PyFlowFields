@@ -94,9 +94,22 @@ A list of all the currently available settings can be found in the following tab
 
 | Setting |     Type     | Description                                               |
 |:-------:|:------------:|-----------------------------------------------------------|
-|  pmode  |   ``Int``    | Particle drawing mode (0: Particle Mode, 1 : Linear Mode) |
+|  pmode  |   ``Int``    | Particle drawing mode (See available modes below)         |
 | pwidth  |   ``Int``    | Particle size (in particle mode only)                     |
 | pcolor  | ``Int (x3)`` | Red, Green, Blue [and Alpha] value for the particle color |
+
+Currently available drawing modes :
+
+|  Mode Name  | Id  | Description                                     |
+|:-----------:|:---:|-------------------------------------------------|
+|  Particle   |  0  | Simple particle (full circle drawn)             |
+|   Linear    |  1  | Line joining the previous and current position  |
+|    Bloc     |  2  | Square particle                                 |
+|   Hollow    |  3  | Hollow circle with only its borders being drawn |
+| Hollow Bloc |  4  | Hollow square with only its borders being drawn |
+|   Photon    |  5  | Circle filled using a radial gradient           |
+
+
 
 </details>
 

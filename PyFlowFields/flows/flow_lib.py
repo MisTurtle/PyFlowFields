@@ -154,7 +154,6 @@ class Particle(Vector):
 
 	def draw(self, env: pygame.Surface, sim_duration: float, settings: ParticleDrawingSettings):
 		if self.skip_drawing:
-			self.skip_drawing = False
 			return
 
 		color = settings.color
@@ -163,8 +162,15 @@ class Particle(Vector):
 
 		if settings.draw_mode == ParticleDrawingSettings.MODE_LINEAR:
 			pygame.draw.line(env, color, (self.prev_pos.x, self.prev_pos.y), (self.x, self.y))
-		else:
+		elif settings.draw_mode == ParticleDrawingSettings.MODE_PARTICLE:
 			pygame.draw.circle(env, color, (self.x, self.y), settings.width)
+		elif settings.draw_mode == ParticleDrawingSettings.MODE_BLOC:
+			pygame.draw.rect(env, color, pygame.Rect(self.x - settings.width / 2, self.y - settings.width / 2, settings.width, settings.width))
+		elif settings.draw_mode == ParticleDrawingSettings.MODE_HOLLOW:
+			pygame.draw.circle(env, color, (self.x, self.y), settings.width, width=1)
+		elif settings.draw_mode == ParticleDrawingSettings.MODE_HOLLOW_BLOC:
+			pygame.draw.rect(env, color, pygame.Rect(self.x - settings.width / 2, self.y - settings.width / 2, settings.width, settings.width), width=1)
+
 
 
 class FlowSimulation:
