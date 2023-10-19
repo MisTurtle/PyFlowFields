@@ -107,8 +107,6 @@ Currently available drawing modes :
 |    Bloc     |  2  | Square particle                                 |
 |   Hollow    |  3  | Hollow circle with only its borders being drawn |
 | Hollow Bloc |  4  | Hollow square with only its borders being drawn |
-|   Photon    |  5  | Circle filled using a radial gradient           |
-
 
 
 </details>
